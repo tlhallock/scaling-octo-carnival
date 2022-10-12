@@ -40,6 +40,25 @@ class LobbyApi {
     console.log("created lobby", data);
     return data;
   }
+
+  joinLobby = async (lobbyUuid, slotUuid) => {
+    const token = localStorage.getItem('token');
+    const request = new Request(
+      baseUrl + '/lobbies/' + lobbyUuid,
+      {
+        method: 'POST',
+        headers: {'Authorization': `Bearer ${token}`},
+        body: JSON.stringify({
+          
+        }),
+      }
+    );
+    const response = await fetch(request);
+    const data = await response.json();
+    console.log("created lobby", data);
+    return data;
+  }
+
 };
 
 

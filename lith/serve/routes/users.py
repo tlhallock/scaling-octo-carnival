@@ -56,3 +56,4 @@ register = fastapi_users.get_register_router(on_after_register)
 users = fastapi_users.get_users_router()
 reset = fastapi_users.get_reset_password_router("SECRET")
 get_current_user = fastapi_users.get_current_user
+get_optional_current_user = fastapi_users.get_optional_current_user

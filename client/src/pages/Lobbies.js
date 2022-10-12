@@ -115,7 +115,7 @@ const Lobbies = props => {
                 lobbies.map((lobby, idx) => (
                   <LobbySummary
                     lobby={lobby}
-                    index={`lobby-${idx}`}
+                    key={`lobby-${idx}`}
                   />
                 ))
               }
@@ -126,7 +126,6 @@ const Lobbies = props => {
     </>
   );
 };
-
 
 
 export default Lobbies;

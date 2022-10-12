@@ -14,6 +14,13 @@ from core.models.lobby.base import SlotStatus
 from core.models.lobby.base import SlotType
 
 
+class SlotPermissions(BaseModel):
+  delete: bool
+  join: bool
+  kick: bool
+  set_type: bool
+
+
 # Could be called perspectives too...
 class SlotInfo(BaseModel):
   uuid: str
@@ -22,11 +29,15 @@ class SlotInfo(BaseModel):
   user: Optional[UserInfo]
   last_heartbeat: Optional[TimeRep]
   
-  you: bool
-  available: bool
-  editable: bool
-  # kickable: bool
-  # deletable: bool
+  present: bool
+  permissions: SlotPermissions
+
+
+class LobbyPermissions(BaseModel):
+  rename: bool
+  delete: bool
+  join: bool
+  add_slot: bool
   
 
 class LobbyInfo(BaseModel):
@@ -39,7 +50,6 @@ class LobbyInfo(BaseModel):
   spectators: List[UserInfo]
   
   present: bool
-  editable: bool
-  deletable: bool
+  permissions: LobbyPermissions
   
   

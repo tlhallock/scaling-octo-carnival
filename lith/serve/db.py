@@ -22,6 +22,7 @@ client = motor.motor_asyncio.AsyncIOMotorClient(
 database = client["DB"]
 
 class Collections:
+  # TODO: users should have a unique index on the uuid column...
   users: AsyncIOMotorCollection = database["users"]
   lobbies: AsyncIOMotorCollection = database["lobbies"]
 

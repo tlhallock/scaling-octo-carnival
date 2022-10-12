@@ -109,6 +109,9 @@ const Slot = ({lobbyUuid, slot, index}) => {
   const kick = () => {};
   const remove = () => {};
   const setSlotType = () => {};
+  const join = () => {
+    lobbyApi.joinLobby();
+  };
 
   // <span><button onClick={props.fill}>Fill</button></span>
   // <span><button>Reset</button></span>
@@ -127,6 +130,7 @@ const Slot = ({lobbyUuid, slot, index}) => {
       <Col><TimeRep time={_.get(slot, "last_heartbeat", 0)} /></Col>
       
       <Col>
+        <Button onClick={join}>join</Button>
         <Button onClick={kick}>kick</Button>
         <Button onClick={remove}>-</Button>
       </Col>
