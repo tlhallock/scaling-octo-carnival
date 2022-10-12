@@ -1,12 +1,5 @@
 
 client/node_modules
 client/build
-lith/core/__pycache__
-lith/core/models/__pycache__
-lith/core/models/lobby/__pycache__
-lith/serve/__pycache__
-lith/serve/models/__pycache__
-lith/serve/models/lobby/__pycache__
-lith/serve/routes/__pycache__
-lith/serve/store/__pycache__
+**/__pycache__
 venv
