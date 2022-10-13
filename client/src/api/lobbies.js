@@ -1,8 +1,8 @@
 
+import { BASE_URL } from './base';
 
-
-const baseUrl = 'http://localhost:8081';
-
+//const baseUrl = 'http://localhost:8081';
+const baseUrl = BASE_URL;
 
 
 class LobbyApi {

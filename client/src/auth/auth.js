@@ -1,8 +1,10 @@
 import decodeJwt from 'jwt-decode';
 
+import { BASE_URL } from '../api/base';
 
-const baseUrl = 'http://localhost:8081';
 
+//const baseUrl = 'http://localhost:8081';
+const baseUrl = BASE_URL;
 
 class Auth {
   

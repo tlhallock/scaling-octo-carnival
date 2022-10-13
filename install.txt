@@ -1,0 +1,10 @@
+docker run --rm -it --tty -v $(pwd):/code node /bin/sh
+cd /code
+yarn install
+
+
+docker exec -it games_mongo bash
+mongo -u root -p example
+db.createUser({user: "games", pwd: "games", roles: [{role: "readWrite", db: "games"}]});
+
+
